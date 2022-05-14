@@ -2,18 +2,18 @@ import { createApp } from 'vue'
 import * as VueRouter from 'vue-router'
 import axios from 'axios'
 import App from './App.vue'
-import Jobs from './components/pages/Jobs.vue'
-import Test from './components/pages/Test.vue'
-
-console.log(import.meta.env)
+import Home from './components/Home.vue'
+import Jobs from './components/Jobs.vue'
+import Test from './components/Test.vue'
 
 const routes = [
+  { path: '/', component: Home },
   { path: '/aa-test', component: Test },
   { path: '/aa-jobs', component: Jobs },
 ]
 
 const router = VueRouter.createRouter({
-  history: VueRouter.createWebHashHistory(),
+  history: VueRouter.createWebHistory(),
   routes,
 })
 
