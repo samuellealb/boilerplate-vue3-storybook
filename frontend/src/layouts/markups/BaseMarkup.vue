@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="base">
     <header>
       <Logo />
       <Menu />
@@ -23,3 +23,11 @@ export default {
   },
 };
 </script>
+
+<style lang="postcss">
+.base {
+  header {
+    background-color: red;
+  }
+}
+</style>
