@@ -1,5 +1,5 @@
-@import '../../../styles/mixins/_mixins.css';
-@import '../../../styles/variables/_variables.css';
+@import '@/styles/mixins/_mixins.css';
+@import '@/styles/variables/_variables.css';
 
 .menu-item {
   text-transform: uppercase;

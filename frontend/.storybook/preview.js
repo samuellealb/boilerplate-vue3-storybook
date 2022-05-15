@@ -1,4 +1,5 @@
 import { initialize, mswDecorator } from 'msw-storybook-addon';
+import '@/styles/main.css'
 
 const useMocker = import.meta.env.VITE_USE_MOCKER
 

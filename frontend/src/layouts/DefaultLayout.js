@@ -1,5 +1,5 @@
 import { markRaw } from "vue";
-import DefaultTemplate from "../components/templates/Default.vue"
+import DefaultTemplate from "@/components/templates/Default.vue"
 
 export default {
   name: 'BaseLayout',

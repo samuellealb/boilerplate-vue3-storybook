@@ -12,8 +12,8 @@
 </template>
 
 <script>
-import Logo from "../atoms/logo/Logo.vue";
-import Menu from "../molecules/menu/Menu.vue";
+import Logo from "@/components/atoms/logo/Logo.vue";
+import Menu from "@/components/molecules/menu/Menu.vue";
 
 export default {
   name: "DefaultTemplate",

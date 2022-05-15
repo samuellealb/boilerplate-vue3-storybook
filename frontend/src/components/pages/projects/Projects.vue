@@ -27,7 +27,7 @@
 <script>
 import './projects.css'
 import { ref, inject } from "vue";
-import DefaultLayout from "../../../layouts/DefaultLayout.js"
+import DefaultLayout from "@/layouts/DefaultLayout.js"
 
 export default {
   name: 'Projects',
