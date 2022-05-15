@@ -1,0 +1,21 @@
+@import '../../../styles/variables/_variables.css';
+@import '../../../styles/mixins/_mixins.css';
+
+.card-label {
+  @mixin font-regular;
+  padding: 4px;
+  background-color: $black;
+  color: $yellow;
+  font-size: 20px;
+  width: fit-content;
+  &--light {
+    background-color: $yellow;
+    color: $black;
+  }
+  &--small {
+    font-size: 16px;
+  }
+  &--large {
+    font-size: 24px;
+  }
+}

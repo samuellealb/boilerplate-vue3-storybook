@@ -12,11 +12,11 @@
 </template>
 
 <script>
-import Logo from "../../components/Logo.vue";
-import Menu from "../../components/Menu.vue";
+import Logo from "../atoms/logo/Logo.vue";
+import Menu from "../molecules/menu/Menu.vue";
 
 export default {
-  name: "BaseMarkup",
+  name: "DefaultTemplate",
   components: {
     Logo,
     Menu,

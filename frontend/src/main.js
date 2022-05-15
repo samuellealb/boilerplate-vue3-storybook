@@ -2,13 +2,11 @@ import { createApp } from 'vue'
 import * as VueRouter from 'vue-router'
 import axios from 'axios'
 import App from './App.vue'
-import Home from './pages/Home.vue'
-import Projects from './pages/Projects.vue'
-import Test from './components/Test.vue'
+import Home from './components/pages/home/Home.vue'
+import Projects from './components/pages/projects/Projects.vue'
 
 const routes = [
   { path: '/', component: Home },
-  { path: '/aa-test', component: Test },
   { path: '/projects', component: Projects },
 ]
 

@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import DefaultLayout from "../layouts/DefaultLayout.js"
+import DefaultLayout from "../../../layouts/DefaultLayout"
 
 export default {
   name: 'Projects',
