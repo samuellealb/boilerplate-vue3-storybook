@@ -3,8 +3,8 @@ export const projects = {
     {
       "id": 1,
       "attributes": {
-        "Title": "Mocked Job",
-        "Description": "Lorem ipsum dolor sit amet",
+        "title": "Mocked Job",
+        "description": "Lorem ipsum dolor sit amet",
         "categories": {
           "data": [
             {
