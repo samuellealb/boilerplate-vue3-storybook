@@ -7,9 +7,12 @@
     "build": "vite build",
     "preview": "vite preview",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "test": "vitest",
+    "coverage": "vitest run --coverage"
   },
   "dependencies": {
+    "@vue/test-utils": "^2.0.0-rc.21",
     "axios": "^0.27.2",
     "dotenv": "^16.0.1",
     "vue": "^3.2.25",
@@ -25,6 +28,7 @@
     "@vitejs/plugin-vue": "^2.3.3",
     "babel-loader": "^8.2.5",
     "cssnano": "^5.1.7",
+    "jsdom": "^19.0.0",
     "postcss": "^8.4.13",
     "postcss-cssnext": "^3.1.1",
     "postcss-import": "^14.1.0",
@@ -32,6 +36,7 @@
     "postcss-nested": "^5.0.6",
     "postcss-simple-vars": "^6.0.3",
     "vite": "^2.9.9",
+    "vitest": "^0.12.6",
     "vue-loader": "^16.8.3"
   }
 }
