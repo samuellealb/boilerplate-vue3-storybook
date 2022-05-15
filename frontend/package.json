@@ -3,11 +3,14 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
-    "mocker": "npx msw init public/ --save && vite --mode mocker",
+    "dev": "run-p serve storybook",
+    "dev:mocker": "run-p serve:mocker storybook:mocker",
+    "serve": "vite",
+    "serve:mocker": "VITE_API_URL='' VITE_SERVER_URL='' VITE_USE_MOCKER=true vite",
     "build": "vite build",
     "preview": "vite preview",
     "storybook": "start-storybook -p 6006",
+    "storybook:mocker": "VITE_API_URL='' VITE_SERVER_URL='' VITE_USE_MOCKER=true start-storybook -s public -p 6006",
     "build-storybook": "build-storybook",
     "test": "vitest",
     "coverage": "vitest run --coverage"

@@ -20,8 +20,10 @@ const axiosInstance = axios.create({
   baseURL: import.meta.env.VITE_API_URL
 })
 
-if (process.env.NODE_ENV === 'mocker') {
-  worker.start()
+if (import.meta.env.VITE_USE_MOCKER) {
+  worker.start({
+    onUnhandledRequest: 'bypass'
+  });
 }
 
 const app = createApp(App)
