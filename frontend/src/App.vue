@@ -22,5 +22,5 @@ export default {
 </script>
 
 <style lang="postcss">
-  @import './assets/style/main.css';
+  @import './styles/main.css';
 </style>
