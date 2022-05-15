@@ -1,0 +1,14 @@
+.menu-item {
+  text-transform: uppercase;
+  padding: 0.5rem;
+  text-decoration: none;
+  color: $black;
+  @mixin font-medium;
+}
+
+.menu-item:visited {
+  text-decoration: none;
+}
+.menu-item.router-link-active {
+  text-decoration: underline;
+}

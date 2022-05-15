@@ -11,19 +11,3 @@ export default {
   name: "Menu",
 };
 </script>
-
-<style>
-.menu-item {
-  font-weight: bold;
-  text-transform: uppercase;
-  padding: 0.5rem;
-  text-decoration: none;
-  color: black;
-}
-.menu-item:visited {
-  text-decoration: none;
-}
-.menu-item.router-link-active {
-  text-decoration: underline;
-}
-</style>

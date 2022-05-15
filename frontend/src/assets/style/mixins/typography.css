@@ -1,0 +1,14 @@
+@define-mixin font-regular {
+  font-family: "Open Sans", Helvetica, Verdana, Tahoma, sans-serif;
+  font-weight: 400;
+}
+
+@define-mixin font-medium {
+  font-family: "Open Sans", Helvetica, Verdana, Tahoma, sans-serif;
+  font-weight: 600;
+}
+
+@define-mixin font-heavy {
+  font-family: "Open Sans", Helvetica, Verdana, Tahoma, sans-serif;
+  font-weight: 800;
+}

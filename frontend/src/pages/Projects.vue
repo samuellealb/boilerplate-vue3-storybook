@@ -53,33 +53,3 @@ export default {
   },
 };
 </script>
-
-<style>
-.projects {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-.projects .project {
-  margin: 1rem auto;
-  padding: 0 0.5rem;
-  justify-content: center;
-  display: flex;
-  flex-flow: column;
-  width: 50%;
-}
-
-.project__cover {
-  max-width: 300px;
-  margin: 0.5rem auto;
-}
-
-.project__title {
-  font-weight: bold;
-}
-
-.project__cat {
-  font-style: italic;
-}
-</style>

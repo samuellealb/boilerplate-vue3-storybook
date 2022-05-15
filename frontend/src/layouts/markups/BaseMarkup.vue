@@ -23,11 +23,3 @@ export default {
   },
 };
 </script>
-
-<style lang="postcss">
-.base {
-  header {
-    background-color: red;
-  }
-}
-</style>
