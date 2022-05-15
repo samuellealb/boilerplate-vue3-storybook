@@ -5,6 +5,7 @@
         <img
           class="project__cover"
           :src="serverUrl + job.attributes.cover.data.attributes.url"
+          :alt="job.attributes.cover.data.attributes.alternativeText"
         />
         <div class="project__title">
           {{ job.attributes.Title }}
@@ -38,7 +39,7 @@ export default {
     const $axios = inject("$axios");
     let serverUrl = import.meta.env.VITE_SERVER_URL;
     const fetchJobs = () => {
-      $axios.get("jobs?populate=categories,cover").then((response) => {
+      $axios.get("/jobs?populate=categories,cover").then((response) => {
         const items = Array.from(response.data.data);
         items.forEach((job) => {
           jobs.value.push(job);
