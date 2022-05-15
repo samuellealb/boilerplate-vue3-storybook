@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- *  job controller
+ *  project controller
  */
 
 const { createCoreController } = require('@strapi/strapi').factories;
 
-module.exports = createCoreController('api::job.job');
+module.exports = createCoreController('api::project.project');

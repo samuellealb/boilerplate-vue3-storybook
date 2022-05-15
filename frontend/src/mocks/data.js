@@ -1,4 +1,4 @@
-export const jobs = {
+export const projects = {
   data: [
     {
       "id": 1,
