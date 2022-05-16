@@ -1,13 +1,9 @@
 import { initialize, mswDecorator } from 'msw-storybook-addon';
 import '@/styles/main.css'
 
-const useMocker = import.meta.env.VITE_USE_MOCKER
-
-if (useMocker) {
-  initialize({
-    onUnhandledRequest: 'bypass'
-  });
-}
+initialize({
+  onUnhandledRequest: 'bypass'
+});
 
 export const decorators = [mswDecorator];
 
