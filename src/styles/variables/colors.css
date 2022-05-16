@@ -1,9 +1,3 @@
-/* :root {
-  --blue: #0000FF;
-} */
-
-/* $blue: var(--blue); */
-/* $lightblue: color(var(--blue) lightness(75%)); */
-$yellow: #FFD800;
+$cyan: #00c8ff;
 $black: #000000;
 $white: #FFFFFF;

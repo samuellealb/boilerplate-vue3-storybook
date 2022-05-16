@@ -1,11 +1,11 @@
 import { rest } from 'msw'
-import { projects } from './data'
+import { users } from './data'
 
 export const handlers = [
-  rest.get(`/projects`, (req, res, ctx) => {
+  rest.get(`/users`, (req, res, ctx) => {
     return res(
       ctx.status(200),
-      ctx.json(projects)
+      ctx.json(users)
     )
   })
 ] 

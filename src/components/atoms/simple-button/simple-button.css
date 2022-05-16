@@ -1,0 +1,31 @@
+@import '@/styles/variables/_variables.css';
+@import '@/styles/mixins/_mixins.css';
+
+.simple-button {
+  @mixin font-regular;
+  padding: 4px;
+  background-color: $cyan;
+  color: $white;
+  font-size: 20px;
+  width: fit-content;
+  height: 24px;
+  border: solid $cyan 4px;
+  &--light {
+    background-color: $white;
+    color: $black;
+    border: solid $black 4px;
+  }
+  &--dark {
+    background-color: $black;
+    color: $white;
+    border: solid $black 4px;
+  }
+  &--small {
+    font-size: 16px;
+    height: 20px;
+  }
+  &--large {
+    font-size: 24px;
+    padding: 8px;
+  }
+}

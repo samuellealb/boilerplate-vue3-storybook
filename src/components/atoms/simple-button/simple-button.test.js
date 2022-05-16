@@ -1,14 +1,14 @@
 import { mount } from '@vue/test-utils'
 import { test, expect } from 'vitest'
-import CardLabel from './CardLabel.vue'
+import SimpleButton from './SimpleButton.vue'
 
 test('mount component', async () => {
-  expect(CardLabel).toBeTruthy()
+  expect(SimpleButton).toBeTruthy()
 
-  const wrapper = mount(CardLabel, {
+  const wrapper = mount(SimpleButton, {
     props: {
       title: 'Test Button',
-      light: false,
+      variant: 'default',
       size: 'medium'
     }
   })
