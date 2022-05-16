@@ -3,12 +3,12 @@ import * as VueRouter from 'vue-router'
 import axios from 'axios'
 import { worker } from './mocks/browser'
 import App from './App.vue'
-import Home from '@/components/pages/home/Home.vue'
-import Projects from '@/components/pages/projects/Projects.vue'
+// import Home from '@/components/pages/home/Home.vue'
+import Users from '@/components/pages/users/Users.vue'
 
 const routes = [
-  { path: '/', component: Home },
-  { path: '/projects', component: Projects },
+  { path: '/', component: Users },
+  { path: '/users', component: Users },
 ]
 
 const router = VueRouter.createRouter({
