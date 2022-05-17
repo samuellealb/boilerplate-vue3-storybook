@@ -7,7 +7,7 @@
     "serve": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "start-storybook -s public -p 6006",
     "build-storybook": "build-storybook",
     "test": "vitest",
     "coverage": "vitest run --coverage"
@@ -41,6 +41,7 @@
     "postcss-nested": "^5.0.6",
     "postcss-simple-vars": "^6.0.3",
     "storybook-dark-mode": "^1.1.0",
+    "storybook-axios": "^1.0.1",
     "vite": "^2.9.9",
     "vitest": "^0.12.6",
     "vue-loader": "^16.8.3"

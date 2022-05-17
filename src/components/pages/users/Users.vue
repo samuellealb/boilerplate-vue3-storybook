@@ -2,6 +2,7 @@
   <default-layout>
     <div class="users">
       <h1>Users</h1>
+      <button @click="fetchUsers()">Get users</button>
       <div class="user" v-for="user in users" :key="user.id">
         <span>{{user.userName}}</span>
       </div>
@@ -11,7 +12,8 @@
 
 <script>
 import './users.css'
-import { ref, inject } from "vue";
+import { ref } from "vue";
+import { getAxios } from '@/utils/get-axios.js'
 import DefaultLayout from "@/layouts/DefaultLayout.js"
 
 export default {
@@ -21,8 +23,7 @@ export default {
   },
   setup() {
     const users = ref([]);
-    const $axios = inject("$axios");
-    let serverUrl = import.meta.env.VITE_SERVER_URL;
+    const $axios = getAxios();
     const fetchUsers = () => {
       $axios.get("/users").then((response) => {
         const items = Array.from(response.data);
@@ -31,10 +32,11 @@ export default {
         });
       });
     };
-    fetchUsers();
+    // fetchUsers();
 
     return {
       users,
+      fetchUsers
     };
   }
 }

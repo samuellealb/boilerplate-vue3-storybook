@@ -10,6 +10,7 @@ module.exports = {
     "@storybook/addon-links",
     "@storybook/addon-essentials",
     'storybook-dark-mode',
+    'storybook-axios/register',
     {
       name: '@storybook/addon-storysource',
       options: {
