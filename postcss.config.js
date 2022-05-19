@@ -6,6 +6,7 @@ module.exports = (ctx) => ({
     'postcss-cssnext': {},
     'postcss-mixins': {},
     'postcss-simple-vars': {},
+    'postcss-calc': {},
     'postcss-nested': {},
     cssnano: ctx.env === 'production' ? {} : false
   }

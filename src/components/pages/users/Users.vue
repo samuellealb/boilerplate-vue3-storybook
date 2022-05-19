@@ -4,7 +4,8 @@
       <h1>Users</h1>
       <button @click="fetchUsers()">Get users</button>
       <div class="user" v-for="user in users" :key="user.id">
-        <span>{{user.userName}}</span>
+        <div>{{user.id}}</div>
+        <div>{{user.userName}}</div>
       </div>
     </div>
   </default-layout>
