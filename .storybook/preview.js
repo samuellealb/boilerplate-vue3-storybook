@@ -4,6 +4,7 @@ import withAxiosDecorator from 'storybook-axios';
 import { getAxios } from '@/utils/get-axios';
 import '@/styles/main.css'
 
+// init mocker server
 initialize();
 
 export const decorators = [mswDecorator, withAxiosDecorator(getAxios())];
@@ -17,6 +18,6 @@ export const parameters = {
     },
   },
   msw: {
-    handlers: [ ...handlers ]
+    handlers: [...handlers]
   },
 }
