@@ -54,9 +54,9 @@ yarn test
 ## Features and good practices
    
 ### Mocker Mode / Server Mode   
-- Mocker server run by default both with Storybook and Vue app.   
+- All scripts run mocker server by default.   
 - To consume server data, you have to define the server URL in the `VITE_API_URL` variable, at `.env.development` file, and add `:server` to script name. e.g. `yarn dev:server`.  
-- All MSW config and data files must be places inside `/src/mocks`   
+- All MSW config and data files must be placed inside `/src/mocks`   
 - Data objects are exported from `/src/mocks/data.js`
 - Request handlers are configured at `/src/mocks/handlers.js` and are used by Vue and Storybook from here.
    
