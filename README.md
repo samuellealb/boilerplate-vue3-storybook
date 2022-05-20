@@ -19,33 +19,29 @@ npx msw init public
 ```
 
 ## Usage   
-    
-The default mode is with MSW server, consuming mocked date.   
-If you want to consume server date, you have to define the server URL in the `VITE_API_URL` variable, at `.env.development` file, and add `:server` to script name. e.g. `yarn dev:server`.   
 
 - Init Storybook and Vue app
 ```
 yarn dev
 ```
-server mode
-```
-yarn dev:server
-```
-   
+
 - Init Vue app only
 ```
 yarn serve
 ```
-server mode
-```
-yarn serve:server
-```
-   
+
 - Init Storybook only
 ```
 yarn storybook
 ```
-server mode
+
+- server mode
+```
+yarn dev:server
+```
+```
+yarn serve:server
+```
 ```
 yarn storybook:server
 ```
@@ -57,8 +53,9 @@ yarn test
    
 ## Features and good practices
    
-### Mocker Service Worker   
+### Mocker Mode / Server Mode   
 - Mocker server run by default both with Storybook and Vue app.   
+- To consume server data, you have to define the server URL in the `VITE_API_URL` variable, at `.env.development` file, and add `:server` to script name. e.g. `yarn dev:server`.  
 - All MSW config and data files must be places inside `/src/mocks`   
 - Data objects are exported from `/src/mocks/data.js`
 - Request handlers are configured at `/src/mocks/handlers.js` and are used by Vue and Storybook from here.
