@@ -18,21 +18,36 @@ yarn
 npx msw init public
 ```
 
-## Usage
-   
+## Usage   
+    
+The default mode is with MSW server, consuming mocked date.   
+If you want to consume server date, you have to define the server URL in the `VITE_API_URL` variable, at `.env.development` file, and add `:server` to script name. e.g. `yarn dev:server`.   
+
 - Init Storybook and Vue app
 ```
 yarn dev
+```
+server mode
+```
+yarn dev:server
 ```
    
 - Init Vue app only
 ```
 yarn serve
-``` 
+```
+server mode
+```
+yarn serve:server
+```
    
 - Init Storybook only
 ```
 yarn storybook
+```
+server mode
+```
+yarn storybook:server
 ```
    
 - Run unit tests (Vitest)

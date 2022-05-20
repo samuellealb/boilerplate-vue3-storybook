@@ -5,9 +5,13 @@ import { getAxios } from '@/utils/get-axios';
 import '@/styles/main.css'
 
 // init mocker server
-initialize();
+const activeDecorators = [withAxiosDecorator(getAxios())]
+if (!import.meta.env.VITE_SERVER_MODE) {
+  initialize();
+  activeDecorators.push(mswDecorator);
+}
 
-export const decorators = [mswDecorator, withAxiosDecorator(getAxios())];
+export const decorators = [...activeDecorators];
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },

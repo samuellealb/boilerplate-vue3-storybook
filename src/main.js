@@ -15,9 +15,9 @@ const router = VueRouter.createRouter({
   routes,
 })
 
-worker.start({
-  onUnhandledRequest: 'bypass'
-});
+if (!import.meta.env.VITE_SERVER_MODE) {
+  worker.start();
+}
 
 const app = createApp(App)
 app.use(router)

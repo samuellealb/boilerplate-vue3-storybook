@@ -1,8 +1,6 @@
 @import '@/styles/variables/_variables.css';
-@import '@/styles/mixins/_mixins.css';
 
 .simple-button {
-  @mixin font-regular;
   padding: 4px;
   background-color: $cyan;
   color: $white;
