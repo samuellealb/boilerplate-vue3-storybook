@@ -1,4 +1,4 @@
-@import '@/styles/variables/_variables.css';
+@import '@/styles/variables';
 .users {
   background-color: $white;
   padding: 16px;
