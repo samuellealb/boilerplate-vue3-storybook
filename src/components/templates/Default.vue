@@ -1,13 +1,11 @@
 <template>
-  <div>
-    <header>
-    </header>
-    <main>
-      <slot />
-    </main>
-    <footer>
-    </footer>
-  </div>
+  <header>
+  </header>
+  <main>
+    <slot />
+  </main>
+  <footer>
+  </footer>
 </template>
 
 <script>

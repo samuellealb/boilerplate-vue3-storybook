@@ -1,4 +1,4 @@
-@import '@/styles/variables/_variables.css';
+@import '@/styles/variables';
 
 .simple-button {
   padding: 4px;
