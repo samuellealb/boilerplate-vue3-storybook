@@ -9,7 +9,6 @@ module.exports = (ctx) => ({
     'postcss-simple-vars': {},
     'postcss-nested': {},
     'postcss-mixins': ({ mixinsDir: path.join(__dirname, './src/styles/mixins/') }),
-    'postcss-calc': {},
     cssnano: ctx.env === 'production' ? {} : false
   }
 })
