@@ -3,11 +3,11 @@ import * as VueRouter from 'vue-router'
 import { worker } from './mocks/browser'
 import App from './App.vue'
 import Home from '@/components/pages/home/Home.vue'
-import Users from '@/components/pages/users/Users.vue'
+import Items from '@/components/pages/items/Items.vue'
 
 const routes = [
   { path: '/', component: Home },
-  { path: '/users', component: Users },
+  { path: '/items', component: Items },
 ]
 
 const router = VueRouter.createRouter({

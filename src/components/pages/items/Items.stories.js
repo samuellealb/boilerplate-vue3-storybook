@@ -1,8 +1,8 @@
-import Users from './Users.vue';
+import Items from './Items.vue';
 
 export default {
-  title: 'Portfolio/Users',
-  component: Users,
+  title: 'Portfolio/Pages/Items',
+  component: Items,
   // argTypes: {
     // size: {
     //   control: { type: 'inline-radio' },
@@ -16,11 +16,11 @@ export default {
 };
 
 const Template = (args) => ({
-  components: { Users },
+  components: { Items },
   setup() {
     return { args };
   },
-  template: '<users v-bind="args" />',
+  template: '<items v-bind="args" />',
 });
 
 export const Default = Template.bind({});

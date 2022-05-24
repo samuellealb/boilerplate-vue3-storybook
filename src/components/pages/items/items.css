@@ -1,5 +1,5 @@
 @import '@/styles/variables';
-.users {
+.items {
   background-color: $white;
   padding: 16px;
 }

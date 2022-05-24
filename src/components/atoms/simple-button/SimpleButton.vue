@@ -1,7 +1,7 @@
 <template>
-  <div :class="classes">
+  <button :class="classes">
     {{ title }}
-  </div>
+  </button>
 </template>
 
 <script>
@@ -9,6 +9,7 @@ import { reactive, computed } from 'vue';
 import './simple-button.css';
 
 export default {
+  name: 'SimpleButton',
   props: {
     title: {
       type: String,
