@@ -2,7 +2,7 @@
   <default-layout>
     <div class="items">
       <h1>Items</h1>
-      <item-list :items="items" />
+      <item-list :items="items" @delete-item="onDelete"/>
     </div>
   </default-layout>
 </template>
@@ -25,5 +25,12 @@ export default {
     ItemList,
     DefaultLayout
   },
-}
+  emits: ['delete-item'],
+  setup(props, { emit }) {
+      function onDelete (id) {
+        emit('delete-item', id);
+      }
+      return { onDelete }
+    },
+  }
 </script>

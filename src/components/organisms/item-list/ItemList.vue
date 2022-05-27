@@ -28,8 +28,8 @@ export default {
   },
   emits: ['delete-item'],
   setup(props, { emit }) {
-    function onDelete (item) {
-      emit('delete-item', item);
+    function onDelete (id) {
+      emit('delete-item', id);
     }
     const hasItems = computed(() => props.items.length > 0)
     return { onDelete, hasItems }

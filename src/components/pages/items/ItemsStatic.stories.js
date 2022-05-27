@@ -3,7 +3,7 @@ import * as ItemCardStories from '@/components/molecules/item-card/ItemCard.stor
 
 export default {
   component: ItemsStatic,
-  title: 'Portfolio/Pages/ItemsStatic',
+  title: 'Portfolio/Pages/Items/StaticData',
 };
 
 const Template = (args) => ({

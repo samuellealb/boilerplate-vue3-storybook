@@ -6,5 +6,9 @@ export const items = [
   {
     id: 2,
     name: 'Clara Nunes'
+  },
+  {
+    id: 3,
+    name: 'Tim Maia'
   }
 ]
