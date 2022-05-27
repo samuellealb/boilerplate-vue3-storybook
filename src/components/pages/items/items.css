@@ -1,5 +1,9 @@
 @import '@/styles/variables';
-.users {
+.items {
   background-color: $white;
   padding: 16px;
+}
+.items h1 {
+  font-family: sans-serif;
+  text-align: center;
 }

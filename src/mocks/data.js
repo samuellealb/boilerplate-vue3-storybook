@@ -1,10 +1,14 @@
-export const users = [
+export const items = [
   {
     id: 1,
-    userName: 'Itamar Assumpção'
+    name: 'Itamar Assumpção'
   },
   {
     id: 2,
-    userName: 'Clara Nunes'
+    name: 'Clara Nunes'
+  },
+  {
+    id: 3,
+    name: 'Tim Maia'
   }
 ]
