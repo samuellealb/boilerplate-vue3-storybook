@@ -1,39 +1,29 @@
 <template>
-  <default-layout>
-    <div class="items">
-      <h1>Items</h1>
-      <button @click="fetchItems()">Get items</button>
-      <div class="item" v-for="item in items" :key="item.id">
-        <div>{{item.id}}</div>
-        <div>{{item.name}}</div>
-      </div>
-    </div>
-  </default-layout>
+  <items-static :items="items" />
 </template>
 
 <script>
-import './items.css'
 import { ref } from "vue";
 import { getAxios } from '@/utils/get-axios.js'
-import DefaultLayout from "@/layouts/DefaultLayout.js"
+import ItemsStatic from "./ItemsStatic.vue";
 
 export default {
   name: 'Items',
   components: {
-    DefaultLayout
+    ItemsStatic
   },
   setup() {
     const items = ref([]);
     const $axios = getAxios();
     const fetchItems = () => {
       $axios.get("/items").then((response) => {
-        const items = Array.from(response.data);
-        items.forEach((item) => {
+        const data = Array.from(response.data);
+        data.forEach((item) => {
           items.value.push(item);
         });
       });
     };
-    // fetchItems();
+    fetchItems();
 
     return {
       items,
