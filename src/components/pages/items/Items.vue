@@ -1,6 +1,6 @@
 <template>
   <items-static :items="items" @delete-item="deleteItem" />
-  <simple-button @click="fetchItems()" title="Get items" />
+  <simple-button class="fetch-button" @click="fetchItems" title="Get items" />
 </template>
 
 <script>
@@ -11,28 +11,26 @@ import SimpleButton from '@/components/atoms/simple-button/SimpleButton.vue'
 
 export default {
   name: 'Items',
+    props: {
+    items: {
+      type: Array,
+      default: () => [],
+    }
+  },
   components: {
     ItemsStatic,
     SimpleButton
   },
   setup() {
-    const items = ref([]);
+    let items = ref([]);
     const $axios = getAxios();
-    const fetchItems = () => {
-      $axios.get("/items").then((response) => {
-        const data = Array.from(response.data);
-        data.forEach((item) => {
-          const itemIsLoaded = items.value.filter(it => it.id === item.id).length > 0
-          if (itemIsLoaded) return
-          items.value.push(item);
-        });
-      });
+    const fetchItems = async () => {
+      const { data } = await $axios.get("/items")
+     items.value = data
     };
-    const deleteItem = (id) => {
-      $axios.delete(`/item/${id}`).then((response) => {
-        items.value.slice(0);
-        items.value = [...response.data]
-      });
+    const deleteItem = async (id) => {
+      const { data } = await $axios.delete(`/item/${id}`)
+      items.value = data
     }
 
     return {
