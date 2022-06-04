@@ -1,0 +1,11 @@
+// Vitest Snapshot v1
+
+exports[`mount component 1`] = `"<button class=\\"simple-button simple-button--default simple-button--medium\\">Default Button</button>"`;
+
+exports[`mount component 2`] = `"<button class=\\"simple-button simple-button--light simple-button--medium\\">Light Button</button>"`;
+
+exports[`mount component 3`] = `"<button class=\\"simple-button simple-button--dark simple-button--medium\\">Dark Button</button>"`;
+
+exports[`mount component 4`] = `"<button class=\\"simple-button simple-button--default simple-button--small\\">Small Button</button>"`;
+
+exports[`mount component 5`] = `"<button class=\\"simple-button simple-button--default simple-button--large\\">Large Button</button>"`;

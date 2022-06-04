@@ -1,0 +1,30 @@
+// Vitest Snapshot v1
+
+exports[`mount component 1`] = `
+"<div class=\\"items\\">
+  <h1>Items</h1>
+  <div class=\\"item-list\\">
+    <div class=\\"item-card\\">
+      <div class=\\"item-card__title\\">Testing Item List 1</div>
+      <div class=\\"item-card__button\\"><button class=\\"simple-button simple-button--default simple-button--small\\">Delete</button></div>
+    </div>
+    <div class=\\"item-card\\">
+      <div class=\\"item-card__title\\">Testing Item List 2</div>
+      <div class=\\"item-card__button\\"><button class=\\"simple-button simple-button--default simple-button--small\\">Delete</button></div>
+    </div>
+    <div class=\\"item-card\\">
+      <div class=\\"item-card__title\\">Testing Item List 3</div>
+      <div class=\\"item-card__button\\"><button class=\\"simple-button simple-button--default simple-button--small\\">Delete</button></div>
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`mount component 2`] = `
+"<div class=\\"items\\">
+  <h1>Items</h1>
+  <div class=\\"item-list\\">
+    <h2>No items loaded =/</h2>
+  </div>
+</div>"
+`;
