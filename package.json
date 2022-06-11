@@ -9,8 +9,8 @@
     "serve:server": "VITE_SERVER_MODE=true vite",
     "build": "vite build",
     "preview": "vite preview",
-    "storybook": "start-storybook -s public -p 6006",
-    "storybook:server": "VITE_SERVER_MODE=true start-storybook -p 6006",
+    "storybook": "start-storybook -s public -p 6006 --ci",
+    "storybook:server": "VITE_SERVER_MODE=true start-storybook -p 6006 --ci",
     "build-storybook": "build-storybook",
     "test": "vitest",
     "coverage": "vitest run --coverage"
