@@ -1,60 +1,48 @@
 import { mount } from '@vue/test-utils'
-import { test, expect } from 'vitest'
-import Items from './ItemsStatic.vue'
+import { getAxios } from '@/utils/get-axios.js'
+import { vi, test, expect, describe } from 'vitest'
+import ItemsStatic from './ItemsStatic.vue'
+import ItemsPage from './Items.vue'
+import { items } from '@/mocks/data'
+const axios = getAxios()
 
-test('mount component', async () => {
-  expect(Items).toBeTruthy()
-
-  const defaultItems = mount(Items, {
-    props: {
-      items: [
-        {
-          id: '1',
-          name: 'Testing Item List 1'
-        },
-        {
-          id: '2',
-          name: 'Testing Item List 2'
-        },
-        {
-          id: '3',
-          name: 'Testing Item List 3'
-        },
-      ]   
-    }
-  })
-  expect(defaultItems.html()).toMatchSnapshot()
-
-  const noItem = mount(Items, {
-    props: {
-      items: []
-    }
+describe('mount component', () => {
+    
+  test('renders empty list', () => {
+    expect(ItemsStatic).toBeTruthy()
+    const noItem = mount(ItemsStatic, { props: { items: [] } })
+    expect(noItem.find('.item-list').findAll('h2').length).toEqual(1)
+    expect(noItem.html()).toMatchSnapshot()
   })
   
-  expect(noItem.html()).toMatchSnapshot()
-})
-
-test('Click on third button emit "delete-item" with item id value', async() => {
-  const wrapper = mount(Items, {
-    props: {
-      items: [
-        {
-          id: 55,
-          name: 'Testing Item List 1'
-        },
-        {
-          id: 235,
-          name: 'Testing Item List 2'
-        },
-        {
-          id: 112,
-          name: 'Testing Item List 3'
-        },
-      ]   
-    }
+  test('renders list with three items', () => {
+    expect(ItemsStatic).toBeTruthy()
+    const threeItems = mount(ItemsStatic, { props: { items } })
+    expect(threeItems.find('.item-list').findAll('.item-card').length).toEqual(3)
+    expect(threeItems.html()).toMatchSnapshot()
   })
-
-  wrapper.find('.item-card:nth-child(3) button').trigger('click')
-  await wrapper.vm.$nextTick()
-  expect(wrapper.emitted('delete-item')[0]).toEqual([112])
+  
 })
+
+describe("API Calls", () => {
+
+  describe("fetchItems being called successufuly", () => {
+    test("should return items list", async () => {    
+      vi.spyOn(axios, 'get').mockResolvedValue(items)
+      mount(ItemsPage, { props: { items: [] } })
+      expect(axios.get).toHaveBeenCalledTimes(1)
+      expect(axios.get).toHaveBeenCalledWith('/items')
+    });
+  });
+
+  describe("deleteItem being called successufuly", () => {
+    test("should return deleted item id", async () => {    
+      vi.spyOn(axios, 'delete')
+      const wrapper = mount(ItemsPage, { props: { items } })
+      wrapper.find('.item-card:nth-of-type(2) button').trigger('click')
+      expect(axios.delete).toHaveBeenCalledTimes(1)
+      expect(axios.delete).toHaveBeenCalledWith('/item/2')
+    });
+  });
+
+});

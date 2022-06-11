@@ -5,7 +5,12 @@ export default {
   component: 'ItemList',
   title: 'Portfolio/Organisms/ItemList',
   decorators: [() => ({ template: '<div style="padding: 3em; background-color:white;"><story/></div>' })],
-  argTypes: { onDelete: {} }
+  argTypes: { onDelete: {} },
+  parameters: {
+    actions: {
+      handles: ['click button'],
+    },
+  },
 }
 
 const Template = args => ({
