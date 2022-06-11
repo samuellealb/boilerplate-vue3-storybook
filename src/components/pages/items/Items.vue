@@ -1,43 +1,37 @@
 <template>
-  <items-static :items="items" @delete-item="deleteItem" />
-  <simple-button class="fetch-button" @click="fetchItems" title="Get items" />
+  <default-layout>
+    <div class="items">
+      <h1>Items</h1>
+      <item-list :items="items" @delete-item="deleteItem"/>
+    </div>
+    </default-layout>
 </template>
 
-<script>
-import { ref } from "vue";
+<script setup>
+import './items.css'
+import DefaultLayout from "@/layouts/DefaultLayout.js"
+import ItemList from '@/components/organisms/item-list/ItemList.vue'
+import { ref, onMounted } from 'vue'
 import { getAxios } from '@/utils/get-axios.js'
-import ItemsStatic from "./ItemsStatic.vue"
-import SimpleButton from '@/components/atoms/simple-button/SimpleButton.vue'
 
-export default {
-  name: 'Items',
-    props: {
-    items: {
-      type: Array,
-      default: () => [],
-    }
-  },
-  components: {
-    ItemsStatic,
-    SimpleButton
-  },
-  setup() {
-    let items = ref([]);
-    const $axios = getAxios();
-    const fetchItems = async () => {
-      const { data } = await $axios.get("/items")
-     items.value = data
-    };
-    const deleteItem = async (id) => {
-      const { data } = await $axios.delete(`/item/${id}`)
-      items.value = data
-    }
-
-    return {
-      items,
-      fetchItems,
-      deleteItem
-    };
+const props = defineProps({
+  items: {
+    type: Array,
+    default: () => [],
   }
+})
+let items = ref(props.items)
+const $axios = getAxios()
+const fetchItems = async () => {
+  const { data } = await $axios.get("/items")
+  items.value = data
 }
+const deleteItem = async (id) => {
+  const { data } = await $axios.delete(`/item/${+id}`)
+  items.value = data
+}
+onMounted(() => {
+  fetchItems()
+})
+
 </script>

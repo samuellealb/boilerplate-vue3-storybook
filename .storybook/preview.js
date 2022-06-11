@@ -14,7 +14,7 @@ if (!import.meta.env.VITE_SERVER_MODE) {
 export const decorators = [...activeDecorators];
 
 export const parameters = {
-  actions: { argTypesRegex: "^on[A-Z].*" },
+  actions: { argTypesRegex: "^on.*" },
   controls: {
     matchers: {
       color: /(background|color)$/i,

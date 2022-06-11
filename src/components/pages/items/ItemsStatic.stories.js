@@ -3,7 +3,7 @@ import * as ItemCardStories from '@/components/molecules/item-card/ItemCard.stor
 
 export default {
   component: ItemsStatic,
-  title: 'Portfolio/Pages/Items/StaticData',
+  title: 'Portfolio/Pages/NoItems',
 };
 
 const Template = (args) => ({
@@ -16,9 +16,5 @@ const Template = (args) => ({
 
 export const Default = Template.bind({});
 Default.args = {
-  items: [
-    { ...ItemCardStories.Default.args.item, id: '1', name: 'Sed do Eiusmod' },
-    { ...ItemCardStories.Default.args.item, id: '2', name: 'Tempor Incididunt' },
-    { ...ItemCardStories.Default.args.item, id: '3', name: 'Magna Aliqua' },
-  ]
+  items: []
 }

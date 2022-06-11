@@ -12,6 +12,7 @@ export default {
       control: { type: 'inline-radio' },
       options: ['default', 'light', 'dark']
     },
+    onClick: { action: 'click' }
   }
 };
 

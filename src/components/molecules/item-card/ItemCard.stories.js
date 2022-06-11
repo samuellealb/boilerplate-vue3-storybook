@@ -7,7 +7,12 @@ export default {
   title: 'Portfolio/Molecules/ItemCard',
   argTypes: {
     onDelete: {}
-  }
+  },
+  parameters: {
+    actions: {
+      handles: ['click button'],
+    },
+  },
 };
 
 export const actionsData = {
