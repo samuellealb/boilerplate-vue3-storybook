@@ -30,6 +30,8 @@ export const Default = Template.bind({});
 Default.args = {
   item: {
     id: '1',
-    name: 'Lorem Ipsum Dolor'
+    attributes: {
+      Name: 'Lorem Ipsum Dolor'
+    }
   }
 }

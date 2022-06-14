@@ -24,9 +24,9 @@ const Template = args => ({
 export const Default = Template.bind({});
 Default.args = {
   items: [
-    { ...ItemCardStories.Default.args.item, id: '1', name: 'Lorem Ipsum' },
-    { ...ItemCardStories.Default.args.item, id: '2', name: 'Dolor Sit' },
-    { ...ItemCardStories.Default.args.item, id: '3', name: 'Consectetur' },
+    { ...ItemCardStories.Default.args.item, id: '1', attributes: { Name: 'Lorem Ipsum' }},
+    { ...ItemCardStories.Default.args.item, id: '2', attributes: { Name: 'Dolor Sit' }},
+    { ...ItemCardStories.Default.args.item, id: '3', attributes: { Name: 'Consectetur' }},
   ]
 }
 

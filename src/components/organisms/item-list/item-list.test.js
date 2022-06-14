@@ -10,15 +10,21 @@ test('mount component', async () => {
       items: [
         {
           id: '1',
-          name: 'Testing Item List 1'
+          attributes: {
+            Name: 'Testing Item List 1'
+          }
         },
         {
           id: '2',
-          name: 'Testing Item List 2'
+          attributes: {
+            Name: 'Testing Item List 2'
+          }
         },
         {
           id: '3',
-          name: 'Testing Item List 3'
+          attributes: {
+            Name: 'Testing Item List 3'
+          }
         },
       ]
     }
@@ -39,15 +45,21 @@ test('Click on second button emit "delete-item" with item id value', async() => 
       items: [
         {
           id: 55,
-          name: 'Testing Item List 1'
+          attributes: {
+            Name: 'Testing Item List 1'
+          }
         },
         {
           id: 235,
-          name: 'Testing Item List 2'
+          attributes: {
+            Name: 'Testing Item List 2'
+          }
         },
         {
           id: 112,
-          name: 'Testing Item List 3'
+          attributes: {
+            Name: 'Testing Item List 3'
+          }
         },
       ]   
     }
