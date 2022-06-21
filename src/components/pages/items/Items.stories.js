@@ -3,7 +3,7 @@ import * as ItemCardStories from '@/components/molecules/item-card/ItemCard.stor
 
 export default {
   component: Items,
-  title: 'Portfolio/Pages/Items',
+  title: 'Boilerplate/Pages/Items',
   argTypes: {
     deleteItem: {},
     fetchItems: {}

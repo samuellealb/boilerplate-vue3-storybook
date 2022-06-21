@@ -1,14 +1,20 @@
 export const items = [
   {
     id: 1,
-    name: 'Itamar Assumpção'
+    attributes: {
+      Name: 'Itamar Assumpção'
+    }
   },
   {
     id: 2,
-    name: 'Clara Nunes'
+    attributes: {
+      Name: 'Clara Nunes' 
+    }
   },
   {
     id: 3,
-    name: 'Tim Maia'
+    attributes: {
+      Name: 'Tim Maia'
+    }
   }
 ]

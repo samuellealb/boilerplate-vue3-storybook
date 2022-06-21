@@ -9,7 +9,9 @@ test('mount component', async () => {
     props: {
       item: {
         id: '2',
-        name: 'Testing Item Card'
+        attributes: {
+          Name: 'Testing Item Card'
+        }
       }    
     }
   })
@@ -22,7 +24,9 @@ test('Click on button emit "delete-item" with item id value', async() => {
     props: {
       item: {
         id: 1,
-        name: 'Testing Item Card'
+        attributes: {
+          Name: 'Testing Item Card'
+        }
       }    
     }
   })

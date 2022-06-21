@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "run-p storybook serve",
-    "dev:server": "run-p storybook:server serve:server",
+    "dev:server": "run-p storybook:server serve:server server",
     "serve": "vite",
     "serve:server": "VITE_SERVER_MODE=true vite",
     "build": "vite build",
@@ -12,8 +12,13 @@
     "storybook": "start-storybook -s public -p 6006 --ci",
     "storybook:server": "VITE_SERVER_MODE=true start-storybook -p 6006 --ci",
     "build-storybook": "build-storybook",
+    "server":"yarn --cwd ./server run develop",
     "test": "vitest",
-    "coverage": "vitest run --coverage"
+    "coverage": "vitest run --coverage",
+    "dep:frontend": "yarn",
+    "dep:backend": "yarn --cwd ./server install",
+    "env:backend": "yarn --cwd ./server setup:env",
+    "config:proj": "run-s dep:frontend dep:backend env:backend"
   },
   "dependencies": {
     "@vue/test-utils": "^2.0.0-rc.21",

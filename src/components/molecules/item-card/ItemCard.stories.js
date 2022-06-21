@@ -4,7 +4,7 @@ import { action } from '@storybook/addon-actions';
 export default {
   component: ItemCard,
   excludeStories: /.*Data$/,
-  title: 'Portfolio/Molecules/ItemCard',
+  title: 'Boilerplate/Molecules/ItemCard',
   argTypes: {
     onDelete: {}
   },
@@ -30,6 +30,8 @@ export const Default = Template.bind({});
 Default.args = {
   item: {
     id: '1',
-    name: 'Lorem Ipsum Dolor'
+    attributes: {
+      Name: 'Lorem Ipsum Dolor'
+    }
   }
 }

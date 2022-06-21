@@ -1,6 +1,6 @@
 <template>
   <div class="item-card">
-    <div class="item-card__title">{{item.name}}</div>
+    <div class="item-card__title">{{item.attributes.Name}}</div>
     <div class="item-card__button">
       <simple-button size="small" title="Delete" @click="onDelete(item.id)" />
     </div>
@@ -20,8 +20,8 @@ export default {
     item: {
       type: Object,
       required: true,
-      default: () => ({'id': '', 'name': ''}),
-      validator: item => ['id', 'name'].every(key => key in item),
+      default: () => ({id: '', attributes: {Name: ''}}),
+      validator: item => ['id', 'attributes'].every(key => key in item),
     }
   },
   emits: ['delete-item'],
