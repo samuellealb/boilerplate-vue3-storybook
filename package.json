@@ -14,7 +14,11 @@
     "build-storybook": "build-storybook",
     "server":"yarn --cwd ./server run develop",
     "test": "vitest",
-    "coverage": "vitest run --coverage"
+    "coverage": "vitest run --coverage",
+    "dep:frontend": "yarn",
+    "dep:backend": "yarn --cwd ./server install",
+    "env:backend": "yarn --cwd ./server setup:env",
+    "config:proj": "run-s dep:frontend dep:backend env:backend"
   },
   "dependencies": {
     "@vue/test-utils": "^2.0.0-rc.21",

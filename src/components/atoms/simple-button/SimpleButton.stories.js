@@ -1,7 +1,7 @@
 import SimpleButton from './SimpleButton.vue';
 
 export default {
-  title: 'Portfolio/Atoms/Simple Button',
+  title: 'Boilerplate/Atoms/Simple Button',
   component: SimpleButton,
   argTypes: {
     size: {

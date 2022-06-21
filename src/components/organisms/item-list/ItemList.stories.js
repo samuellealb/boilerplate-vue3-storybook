@@ -3,7 +3,7 @@ import * as ItemCardStories from '@/components/molecules/item-card/ItemCard.stor
 
 export default {
   component: 'ItemList',
-  title: 'Portfolio/Organisms/ItemList',
+  title: 'Boilerplate/Organisms/ItemList',
   decorators: [() => ({ template: '<div style="padding: 3em; background-color:white;"><story/></div>' })],
   argTypes: { onDelete: {} },
   parameters: {

@@ -4,7 +4,7 @@ import { action } from '@storybook/addon-actions';
 export default {
   component: ItemCard,
   excludeStories: /.*Data$/,
-  title: 'Portfolio/Molecules/ItemCard',
+  title: 'Boilerplate/Molecules/ItemCard',
   argTypes: {
     onDelete: {}
   },
