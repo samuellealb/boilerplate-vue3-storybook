@@ -35,21 +35,21 @@ yarn serve
 yarn storybook
 ```
 
-- server mode
+- Server Mode   
+Starts server run all services in Server Mode
 ```
-// Starts server run all services in server mode
 yarn dev:server
 ```
+Init Strapi server (required for the following commands)
 ```
-// Starts Strapi server (required for the following commands)
 yarn server
 ```
+Init Vue app only in Server Mode
 ```
-// run Vue app only in server mode
 yarn serve:server
 ```
+Init Storybook only in Server Mode
 ```
-// run Storybook only in server mode
 yarn storybook:server
 ```
    
