@@ -20,39 +20,40 @@ npx msw init public
 
 ## Usage   
 
+### Mocker Mode
 - Init Storybook and Vue app
 ```
 yarn dev
 ```
-
 - Init Vue app only
 ```
 yarn serve
 ```
-
 - Init Storybook only
 ```
 yarn storybook
 ```
 
-- Server Mode   
-Starts server run all services in Server Mode
+### Server Mode   
+    
+- Starts server run all services in Server Mode
 ```
 yarn dev:server
 ```
-Init Strapi server (required for the following commands)
+- Init Strapi server (required for the following commands)
 ```
 yarn server
 ```
-Init Vue app only in Server Mode
+- Init Vue app only in Server Mode
 ```
 yarn serve:server
 ```
-Init Storybook only in Server Mode
+- Init Storybook only in Server Mode
 ```
 yarn storybook:server
 ```
-   
+
+### Testing
 - Run unit tests (Vitest)
 ```
 yarn test
